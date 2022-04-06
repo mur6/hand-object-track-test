@@ -1,10 +1,13 @@
 import sys
-import cv2
-import mediapipe as mp
 
+import cv2
+import hand_track
+
+# The mediapipe have to be imported here, because of
+# https://github.com/google/mediapipe/issues/2622 .
+import mediapipe
 import midas
 import yolo
-import hand_track
 
 
 def main(image_filename):

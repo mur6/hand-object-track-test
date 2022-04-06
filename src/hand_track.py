@@ -18,11 +18,11 @@ def get_middle_finger_mcp_point(cv_image):
         # Convert the BGR image to RGB before processing.
         results = hands.process(cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB))
         # Print handedness and draw hand landmarks on the image.
-        print("Handedness:", results.multi_handedness)
+        # print("Handedness:", results.multi_handedness)
         if not results.multi_hand_landmarks:
             raise HandNotFoundError()
         image_height, image_width, _ = cv_image.shape
-        #annotated_image = cv_image.copy()
+        # annotated_image = cv_image.copy()
         for hand_landmarks in results.multi_hand_landmarks:
             # print('hand_landmarks:', hand_landmarks)
             # print(
